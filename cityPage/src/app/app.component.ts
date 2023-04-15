@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { TitlePanelComponent } from './app-functionality-module/components/title-panel/title-panel.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,9 +7,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'cityPage';
-  constructor(private router: Router) {}
+  bigTitle = 'New Adventure';
 
-navigateToCities() {
-  this.router.navigate(['/cities']);
-}
+  onVisit(city: string): void {
+    this.bigTitle = city;
+  }
 }

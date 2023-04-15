@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-title-panel',
@@ -6,9 +7,18 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./title-panel.component.scss']
 })
 export class TitlePanelComponent {
-  @Output() discoverNowClicked = new EventEmitter<void>();
+  bigTitle = 'New Adventure';
 
+  constructor(private router: Router){};
+
+  @Input() onVisit: any;
+  
   discoverNow(): void {
-    this.discoverNowClicked.emit();
+    this.router.navigate(['/cities'])
   }
+
+  visit(city: string): void {
+    this.onVisit(city);
+  }
+
 }

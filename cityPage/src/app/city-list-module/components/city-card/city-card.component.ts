@@ -8,4 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CityCardComponent {
   @Input() city: any;
   @Output() visitNow = new EventEmitter<string>();
+  onVisit() {
+    this.visitNow.emit(this.city.name);
+  }  
 }

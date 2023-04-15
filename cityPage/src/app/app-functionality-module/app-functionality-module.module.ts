@@ -19,6 +19,11 @@ import { TitlePanelComponent } from './components/title-panel/title-panel.compon
     CommonModule,
     MyModuleRoutingModule,
     FormsModule
+  ],
+  exports: [
+    SearchBarComponent,
+    ServicesPanelComponent,
+    TitlePanelComponent
   ]
 })
 export class AppFunctionalityModule { }

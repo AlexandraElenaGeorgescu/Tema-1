@@ -3,17 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CityListComponent } from './components/city-list/city-list.component';
-import { CityCardComponent } from './components/city-card/city-card.component';
-import { SelectedCityComponent } from './components/selected-city/selected-city.component';
 import { AppFunctionalityModule } from './app-functionality-module/app-functionality-module.module';
+import { SearchBarComponent } from './app-functionality-module/components/search-bar/search-bar.component';
+import { ServicesPanelComponent } from './app-functionality-module/components/services-panel/services-panel.component';
+import { TitlePanelComponent } from './app-functionality-module/components/title-panel/title-panel.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CityCardComponent,
-    SelectedCityComponent,
-    CityListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
