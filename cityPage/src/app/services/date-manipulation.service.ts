@@ -9,9 +9,9 @@ export class DataManipulationService {
   constructor() {}
 
   cities: City[]=[
-    { name: 'New York City', image: 'new-york-city.jpg', description: 'The city that never sleeps' },
-    { name: 'Paris', image: 'paris.jpg', description: 'The city of love'},
-    { name: 'Tokyo', image: 'tokyo.jpg', description: 'The city of lights'}
+    { name: 'New York City', image: '/assets/images/ny.jpg', description: 'The city that never sleeps' },
+    { name: 'Paris', image: '/assets/images/paris.jpg', description: 'The city of love'},
+    { name: 'Tokyo', image: '/assets/images/tokyo.jpg', description: 'The city of lights'}
   ];
 
   getCities(){

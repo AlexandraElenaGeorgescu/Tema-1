@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { City } from 'src/app/models/cities';
 
 @Component({
   selector: 'app-city-card',
@@ -6,7 +7,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./city-card.component.scss']
 })
 export class CityCardComponent {
-  @Input() city: any;
+  @Input()
+  city!: City;
   @Output() visitNow = new EventEmitter<string>();
   onVisit() {
     this.visitNow.emit(this.city.name);
