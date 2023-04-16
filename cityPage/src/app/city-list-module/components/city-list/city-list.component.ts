@@ -15,4 +15,5 @@ export class CityListComponent implements OnInit {
   ngOnInit(){
     this.cities=this.DateService.getCities();
   }
+  
 }

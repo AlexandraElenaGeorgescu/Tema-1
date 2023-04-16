@@ -12,5 +12,6 @@ export class CityCardComponent {
   @Output() visitNow = new EventEmitter<string>();
   onVisit() {
     this.visitNow.emit(this.city.name);
+    console.log(this.city.name)
   }  
 }
