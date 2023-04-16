@@ -1,4 +1,4 @@
-.city-list {
+ .city-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -8,16 +8,26 @@
   .city-card {
     margin: 1rem;
   }
-
-  .title-panel{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: forestgreen;
-    opacity:80%;
+  .title-panel {
+    margin: 50px 0 20px;
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
-    text-decoration:underline 1px;
-    text-underline-position: under;
+    color: forestgreen;
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
   }
+
+  .separator {
+    display: block;
+    height: 3px;
+    margin: 0;
+    background-color: #fff;
+    width: 30%;
+    margin:0 auto;
+  }
+  
 
   .panel{
     background-color: rgb(231, 247, 231);
