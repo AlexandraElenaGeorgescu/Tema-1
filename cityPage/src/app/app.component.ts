@@ -7,9 +7,10 @@ import { TitlePanelComponent } from './app-functionality-module/components/title
 })
 export class AppComponent {
   title = 'cityPage';
-  bigTitle = 'New Adventure';
-
-  onVisit(city: string): void {
-    this.bigTitle = city;
+  bigTitle = 'New Adventure'|| '';
+  onVisit(event: Event): void {
+    const cityName = (event.target as HTMLElement).textContent;
+    this.bigTitle = cityName|| '';
   }
+  
 }

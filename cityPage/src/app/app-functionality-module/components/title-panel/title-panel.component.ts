@@ -9,16 +9,18 @@ import { Router } from '@angular/router';
 export class TitlePanelComponent {
   bigTitle = 'New Adventure';
 
-  constructor(private router: Router){};
+  constructor(private router: Router){
 
-  @Input() onVisit: any;
+  };
+
   
   discoverNow(): void {
     this.router.navigate(['/cities'])
   }
 
-  visit(city: string): void {
-    this.onVisit(city);
+  onVisit(event: Event): void {
+    const cityName = (event.target as HTMLElement).textContent;
+    this.bigTitle = cityName|| '';
   }
 
 }
