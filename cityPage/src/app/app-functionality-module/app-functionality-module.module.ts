@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ServicesPanelComponent } from './components/services-panel/services-panel.component';
 import { TitlePanelComponent } from './components/title-panel/title-panel.component';
+import { CityCardComponent } from '../city-list-module/components/city-card/city-card.component';
+import { CityListModuleModule } from '../city-list-module/city-list-module.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { TitlePanelComponent } from './components/title-panel/title-panel.compon
   imports: [
     CommonModule,
     MyModuleRoutingModule,
-    FormsModule
+    FormsModule,
+    CityListModuleModule
   ],
   exports: [
     SearchBarComponent,

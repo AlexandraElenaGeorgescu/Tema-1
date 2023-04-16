@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { City } from 'src/app/models/cities';
 import { DataManipulationService } from 'src/app/services/date-manipulation.service';
 
 @Component({
@@ -9,12 +10,15 @@ import { DataManipulationService } from 'src/app/services/date-manipulation.serv
 export class SearchBarComponent {
   searchQuery!: string;
 
-  @Output() searchQueryEmitter = new EventEmitter<string>();
+  @Output()
+  cities!: City[];
 
   constructor(private dateManipulationService: DataManipulationService) { }
 
   search() {
-    const formattedQuery = this.dateManipulationService.formatSearchQuery(this.searchQuery);
-    this.searchQueryEmitter.emit(formattedQuery);
+    const filteredCities = this.dateManipulationService.getCities().filter(city => 
+      city.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
+    this.cities = filteredCities;
   }
 }

@@ -18,14 +18,4 @@ export class DataManipulationService {
     return this.cities
   };
 
-  formatSearchQuery(query: string): string {
-    // Remove extra spaces
-    const trimmedQuery = query.trim();
-
-    // Convert to lowercase
-    const lowerCaseQuery = trimmedQuery.toLowerCase();
-
-    return lowerCaseQuery;
-  }
-
 }

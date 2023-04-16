@@ -18,6 +18,11 @@ import { SelectedCityComponent } from './components/selected-city/selected-city.
   imports: [
     CommonModule,
     CityListModuleRoutingModule
+  ],
+  exports:[
+    CityListComponent,
+    CityCardComponent,
+    SelectedCityComponent
   ]
 })
 export class CityListModuleModule { }
