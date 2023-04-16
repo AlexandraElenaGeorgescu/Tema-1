@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { City } from '../models/cities';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,13 @@ export class DataManipulationService {
     { name: 'London', image: '/assets/images/lon.jpg', description: 'The city of rain'},
     { name: 'Verona', image: '/assets/images/ver.jpg', description: 'The city of Romeo and Juliette'}
   ];
+
+  private bigTitleSubject = new BehaviorSubject<string>('New Adventure');
+  bigTitle$ = this.bigTitleSubject.asObservable();
+
+  setBigTitle(name: string) {
+    this.bigTitleSubject.next(name);
+  }
 
   getCities(){
     return this.cities
